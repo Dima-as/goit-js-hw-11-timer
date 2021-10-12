@@ -1,12 +1,3 @@
-const refs = {
-  field: document.querySelector(".field"),
-  daysC: document.querySelector('span[data-value="days"]'),
-  hoursC: document.querySelector('span[data-value="hours"]'),
-  minsC: document.querySelector('span[data-value="mins"]'),
-  secsC: document.querySelector('span[data-value="secs"]'),
-};
-const {  field, daysC, hoursC, minsC, secsC } = refs;
-
 class Timer {
   constructor(finishDate, markup) {
     this.markup = markup;
@@ -46,13 +37,11 @@ class Timer {
 }
 
 const myTimer = new Timer(new Date(`jan 1, 2022`), {
-  daysC,
-  hoursC,
-  minsC,
-  secsC,
+  daysC: document.querySelector('span[data-value="days"]'),
+  hoursC: document.querySelector('span[data-value="hours"]'),
+  minsC: document.querySelector('span[data-value="mins"]'),
+  secsC: document.querySelector('span[data-value="secs"]'),
 });
 
 myTimer.start();
 // myTimer.stop()
-
-  
